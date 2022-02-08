@@ -1,38 +1,249 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root{
+  --green:#27ae60;
+  --dark-color:#219150;
+  --black:#444;
+  --light-color:#666;
+  --border:.1rem solid rgba(0,0,0,.1);
+  --border-hover:.1rem solid var(--black);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  transition: width none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+.containers {
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px ;
+  background-image: linear-gradient( #0f2027, #203a43, #2c5364);
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.Books {
+  margin: 5px 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.config {
+  padding: 5rem 9%;
+}
+
+.featured {
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  border: var(--border);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.newsletter {
+  background: url("./config/images/letter-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0px 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.newsletter form {
+  max-width: 45rem;
+  margin-left: auto;
+  text-align: center;
+  padding: 5rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.newsletter form h3 {
+  font-size: 2.2rem;
+  color: #fff;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+
+.newsletter form .box {
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  text-transform: none;
+}
+
+
+.icons-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap:1.5rem;
+}
+
+.icons-container .icons{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:1.5rem;
+  padding:2rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.icons-container .icons i{
+  font-size: 3.5rem;
+  color:var(--green);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icons-container .icons h3{
+  font-size: 2.2rem;
+  color:var(--black);
+  padding-bottom: .5rem;
+}
+
+.icons-container .icons p{
+  font-size: 1.4rem;
+  color:var(--light-color);
+}
+
+.deal {
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.deal .content {
+  flex: 1 1 42rem;
+}
+
+.deal .image {
+  flex: 1 1 42rem;
+}
+
+.deal .image img {
+  width: 100%;
+}
+
+.deal .content h3 {
+  color: var(--green);
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.deal .content h1 {
+  color: var(--black);
+  font-size: 4rem;
+}
+
+.deal .content p {
+  padding: 1rem 0;
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+  padding: 4rem 0;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+  color: var(--green);
+  padding-right: 0.5rem;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box .map {
+  width: 100%;
+}
+
+.footer .share {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--green);
+  margin: 0 0.3rem;
+  border-radius: 50%;
+}
+
+.footer .share a:hover {
+  background: var(--black);
+}
+
+.footer .credit {
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.footer .credit span {
+  color: var(--green);
+}
+
+
+.navbar{
+  padding: 15px 0px;
+  font-size: 15px;
+  font-weight: bold;
 }
