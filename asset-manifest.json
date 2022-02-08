@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Book-Store/static/css/main.5b24774c.css",
+    "main.js": "/Book-Store/static/js/main.99ca865d.js",
+    "static/media/deal-img.jpg": "/Book-Store/static/media/deal-img.9c349860897ee5a98e66.jpg",
+    "static/media/letter-bg.jpg": "/Book-Store/static/media/letter-bg.c6b91cf1c2e4516e65ea.jpg",
+    "index.html": "/Book-Store/index.html",
+    "main.5b24774c.css.map": "/Book-Store/static/css/main.5b24774c.css.map",
+    "main.99ca865d.js.map": "/Book-Store/static/js/main.99ca865d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b24774c.css",
+    "static/js/main.99ca865d.js"
+  ]
+}
